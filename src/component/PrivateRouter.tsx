@@ -6,7 +6,7 @@ const PrivateRouter = ({children}: any) => {
 
     const user = useContext(CustomContext);
 
-    if (user?.user === null) {
+    if (!user?.user) {
         return <Navigate to={'/register'}/>
     }
 
